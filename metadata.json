@@ -1,0 +1,6 @@
+{
+  "name": "Dubai Gold & Jewellers | Luxury Gold & Diamond Jewellery",
+  "description": "Discover exquisite Dubai 24K, 22K, 18K gold and diamond jewellery, certified bridal sets, real-time gold rates, and bespoke craftsmanship.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

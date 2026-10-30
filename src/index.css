@@ -1,0 +1,90 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --gold-primary: #D4AF37;
+    --gold-secondary: #AA771C;
+    --gold-light: #F3E5AB;
+    --gold-dark: #8A6414;
+    --gold-champagne: #F5E6CA;
+    --gold-metallic: linear-gradient(135deg, #ECC880 0%, #C59B27 50%, #E3BE6C 100%);
+  }
+
+  body {
+    font-family: 'Plus Jakarta Sans', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+  }
+
+  h1, h2, h3, .font-serif-luxury {
+    font-family: 'Cormorant Garamond', Georgia, serif;
+  }
+
+  .font-display {
+    font-family: 'Cinzel', serif;
+  }
+}
+
+/* Custom Luxury Gradients & Accents */
+.gold-text-gradient {
+  background: linear-gradient(135deg, #ECC880 0%, #D4AF37 40%, #AA771C 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.gold-border-gradient {
+  border-image: linear-gradient(135deg, #ECC880, #C59B27, #ECC880) 1;
+}
+
+.gold-shimmer {
+  background: linear-gradient(90deg, rgba(212, 175, 55, 0.1) 0%, rgba(212, 175, 55, 0.25) 50%, rgba(212, 175, 55, 0.1) 100%);
+  background-size: 200% 100%;
+  animation: shimmer 2.5s infinite;
+}
+
+@keyframes shimmer {
+  0% { background-position: -200% 0; }
+  100% { background-position: 200% 0; }
+}
+
+/* Smooth custom scrollbars */
+::-webkit-scrollbar {
+  width: 7px;
+  height: 7px;
+}
+::-webkit-scrollbar-track {
+  background: #141416;
+}
+::-webkit-scrollbar-thumb {
+  background: #38342E;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #735D2A;
+}
+
+/* Print Styles for Invoices and Gold Calculations */
+@media print {
+  body {
+    background-color: #ffffff !important;
+    color: #000000 !important;
+    font-size: 12pt;
+  }
+
+  .no-print {
+    display: none !important;
+  }
+
+  .print-only {
+    display: block !important;
+  }
+
+  .print-container {
+    box-shadow: none !important;
+    border: none !important;
+    padding: 0 !important;
+    margin: 0 !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    background: #ffffff !important;
+    color: #000000 !important;
+  }
+}
